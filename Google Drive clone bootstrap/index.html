@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Drive</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg ">
+    <a class="navbar-brand" href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968523.png" width="35" height="35"
+        class="d-inline-block align-top" alt="">
+      <span class="text-secondary ml-1 ">Drive<span />
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="col-md-7">
+
+      <div class="ml-5">
+
+        <div class="form">
+          <i class="fa fa-search"></i>
+          <input type="text" class="form-control form-input" placeholder="Search in Drive...">
+          <span class="left-pan"><i class="fa fa-microphone"></i></span>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="d-flex justify-content-center ml-5 pl-5 form-inline  align-items-center">
+
+      <i class="fa fa-check-circle text-secondary  ml-4" style='font-size:23px'></i>
+      <i class="fa fa-question-circle  text-secondary  ml-4" style="font-size:23px"></i>
+      <i class="fa fa-gear text-secondary ml-4" style="font-size:23px"></i>
+
+
+      <div class=" ml-5">
+        <i class="fa fa-gear text-secondary  ml-3" style="font-size:23px"></i>
+
+        <img class="rounded-circle  ml-3" width="35" height="35" alt="avatar1"
+          src="data:image/jpeg;base64,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" />
+      </div>
+
+
+      <div>
+
+
+      </div>
+    </div>
+
+
+
+  </nav>
+
+  <!--Main Navigation-->
+  <header>
+    <!-- Sidebar -->
+
+
+
+    <div class="pt-4 ">
+
+      <button class="shadow-sm  ml-3  btn bg-white rounded-pill">
+
+
+        <img src="https://i.postimg.cc/Y9b9bPqs/plus-sign-symbol-simple-design-260nw-1404396161-removebg-preview.png"
+          width="40" height="40" alt="img">
+        <span>New</span>
+
+
+      </button>
+
+    </div>
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+      <div class="position-sticky">
+        <div class="list-group list-group-flush mx-3">
+
+          <a href="#" class="list-group-item list-group-item-action py-2  ripple"><i
+              class="fa fa-angle-right  pr-2 me-3"></i>
+            <li class="fa fa-desktop"><span class="pl-2">My Drive</span></li>
+          </a>
+
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
+              class="  fa fa-angle-right   pr-2 me-3"></i>
+            <li class="fa fa-desktop"><span class="pl-2">Computers</span></li>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
+              class="fa fa-users  pr-3 me-3"></i><span>Shared with me</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
+              class="fa fa-clock-o  pr-3 me-3"></i><span>Recent</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
+              class="fa fa-star   pr-3 me-3"></i><span>Stared</span></a>
+          <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
+              class="fa fa-trash  pr-3 me-3"></i><span>Trash</span></a>
+
+
+          <a href="#" class="list-group-item list-group-item-action py-2 mt-3 m ripple"><i
+              class="fa fa-cloud mr-4 fa-fw me-3"></i><span>Storage</span></a>
+
+
+
+          <div class="progress" style="height: 5px;">
+            <div class="progress-bar w-50" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            </div>
+          </div>
+
+          <span class="text-secondary">8.7 GB of 15 GB Used</span>
+
+          <button type="button" class="btn btn-outline-light  text-primary   pt-3">Buy storage</button>
+
+
+
+        </div>
+      </div>
+    </nav>
+
+
+
+
+  </header>
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main>
+   
+
+   
+    <div class="container pt-4">
+      <div class="text-secondary mb-3">
+        Folder
+            </div>
+
+      <div class="row  row-cols-4  row-cols-md-3">
+
+        <div class="col  mb-3 ">
+          <div class="p-1 card shadow-sm">
+              <h6 class="text-secondary">
+                <li class="fa fa-folder">
+                </li> Document
+              </h6>
+
+          
+
+          </div>
+
+        </div>
+        <div class="col  mb-3">
+          <div class="p-1 card shadow-sm">
+              <h6 class="text-secondary">
+                <li class="fa fa-folder">
+                </li> Document
+              </h5>
+
+          
+
+          </div>
+
+        </div>
+        <div class="col  mb-3">
+          <div class="p-1 card shadow-sm">
+              <h6 class="text-secondary">
+                <li class="fa fa-folder">
+                </li> Document
+              </h5>
+
+          
+
+          </div>
+
+        </div>
+        <div class="col  mb-3">
+          <div class="p-1 card shadow-sm">
+              <h6 class="text-secondary">
+                <li class="fa fa-folder">
+                </li> Document
+              </h5>
+
+          
+
+          </div>
+
+        </div>
+        <div class="col  mb-3">
+          <div class="p-1 card shadow-sm">
+              <h6 class="text-secondary">
+                <li class="fa fa-folder">
+                </li> Document
+              </h5>
+
+          
+
+          </div>
+
+        </div>
+        <div class="col  mb-3">
+          <div class="p-1 card shadow-sm">
+              <h6 class="text-secondary">
+                <li class="fa fa-folder">
+                </li> Document
+              </h5>
+
+          
+
+          </div>
+
+        </div>
+
+
+        
+      </div>
+
+
+
+
+      <div class="container pt-4">
+        <div class="text-secondary mb-3">
+          Folder
+              </div>
+
+        <div class="row row-cols-1 row-cols-md-3">
+          <div class="col mb-3">
+            <div class="card h-100">
+  
+              <div class="view overlay">
+                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.webp"
+                  alt="Card image cap">
+                <a href="#!">
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+  
+              <div class="card-body">
+                <h4 class="card-title">Document</h4>
+                <p class="card-text">
+                  what do you want
+  
+                </p>
+  
+              
+              </div>
+  
+            </div>
+  
+  
+          </div>
+          <div class="col mb-3">
+            <div class="card h-100">
+  
+              <div class="view overlay">
+                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.webp"
+                  alt="Card image cap">
+                <a href="#!">
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+  
+  
+              <div class="card-body">
+  
+  
+                <h4 class="card-title">Document</h4>
+  
+                <p class="card-text">
+                  what do you want
+  
+                </p>
+  
+               
+              </div>
+  
+            </div>
+  
+  
+  
+  
+  
+          </div>
+  
+          <div class="col mb-3">
+            <div class="card h-100">
+  
+              <div class="view overlay">
+                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.webp"
+                  alt="Card image cap">
+                <a href="#!">
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+  
+  
+              <div class="card-body">
+  
+  
+                <h4 class="card-title">Document</h4>
+  
+                <p class="card-text">
+                  what do you want
+  
+                </p>
+  
+              
+              </div>
+  
+            </div>
+  
+  
+  
+  
+  
+          </div>
+  
+        </div>
+  
+  
+  
+  
+  
+      </div>
+  </main>
+  <!--Main layout-->
+
+
+
+
+
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+  integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+
+<!-- icon -->
+
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+</html>

@@ -1,0 +1,96 @@
+body{
+
+    background: #d1d5db;
+}
+
+.height{
+
+    height: 60px;
+}
+
+.form{
+
+    position: relative;
+}
+
+.form .fa-search{
+
+    position: absolute;
+    top:16px;
+    left: 15px;
+    color: #9ca3af;
+      
+
+
+}
+
+.form span{
+
+        position: absolute;
+    right: 17px;
+    top: 10px;
+    padding: 2px;
+    border-left: 1px solid #d1d5db;
+
+}
+
+.left-span{
+    padding-left: 18px;
+}
+
+.left-pan i{
+   
+   padding-left: 10px;
+}
+
+.form-input{
+
+    height: 50px;
+    text-indent: 33px;
+    border-radius: 10px;
+  
+
+}
+
+.form-input:focus{
+
+    box-shadow: none;
+    border:none;
+   
+
+}
+
+
+
+body {
+    background-color: #fbfbfb;
+    }
+    @media (min-width: 991.98px) {
+    main {
+    padding-left: 240px;
+    }
+    }
+    
+    /* Sidebar */
+    .sidebar {
+        margin-top: 9rem;
+     
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 58px 0 0; /* Height of navbar */
+   
+    width: 240px;
+    z-index: 60;
+    }
+    
+    
+    .sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: 0.5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    }
